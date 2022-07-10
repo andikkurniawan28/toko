@@ -10,5 +10,9 @@ Demo
 ***************
 
 http://rawsugar.ptkebonagung.com/my_project/toko/
+
+Demo Account
+***************
+
 username : admin
 password : admin
