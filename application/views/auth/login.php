@@ -38,7 +38,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">App Toko</h1>
                                     </div>
                                     <form class="user" method="post" action="<?=base_url('auth/prosesLogin');?>">
                                         <div class="form-group">
@@ -46,10 +46,14 @@
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Enter Username..." name="username" required>
                                         </div>
+
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password" required>
                                         </div>
+
+                                        <?= $this->session->flashdata("message"); ?>
+
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
