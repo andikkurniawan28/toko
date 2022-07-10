@@ -26,9 +26,13 @@ class Site extends CI_Controller {
 
     public function dataSupplier()
     {
+        $this->load->model('Data_Supplier_Model');
+
         $data['page_title'] = 'Data Supplier';
+        $data['table']      = $this->Data_Supplier_Model->getDataSupplierAll();
 
 		$this->load->view('static/header', $data);
+		$this->load->view('master/dataSupplier', $data);
 		$this->load->view('static/footer');
     }
 
@@ -46,9 +50,13 @@ class Site extends CI_Controller {
 
     public function dataProduk()
     {
+        $this->load->model('Data_Produk_Model');
+
         $data['page_title'] = 'Data Produk';
+        $data['table']      = $this->Data_Produk_Model->getDataProdukAll();
 
 		$this->load->view('static/header', $data);
+		$this->load->view('master/dataProduk', $data);
 		$this->load->view('static/footer');
     }
 
